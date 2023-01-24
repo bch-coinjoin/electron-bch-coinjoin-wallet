@@ -1,10 +1,10 @@
-const electron = require('electron')
-const app = electron.app
-const BrowserWindow = electron.BrowserWindow
-
+// Global npm libraries
+const { app, BrowserWindow, dialog } = require('electron')
 const path = require('path')
-// const url = require('url')
 const isDev = require('electron-is-dev')
+
+// Local libraries
+const ServerSideServices = require('../src/services/server-side-services')
 
 let mainWindow
 
@@ -14,7 +14,7 @@ function createWindow () {
   mainWindow.on('closed', () => { mainWindow = null })
 }
 
-app.on('ready', createWindow)
+// app.on('ready', createWindow)
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
@@ -27,3 +27,23 @@ app.on('activate', () => {
     createWindow()
   }
 })
+
+// Main function that starts the Electron app and background services like IPFS.
+async function run () {
+  try {
+    try {
+      await app.whenReady()
+
+      createWindow()
+    } catch (e) {
+      dialog.showErrorBox('Electron could not start', e.stack)
+      app.exit(1)
+    }
+
+    const serverSideServices = new ServerSideServices()
+    serverSideServices.start()
+  } catch (err) {
+    console.error('Error in run(): ', err)
+  }
+}
+run()
