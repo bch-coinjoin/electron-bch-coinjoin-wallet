@@ -6,10 +6,10 @@
 const colabCoinJoinApi = require('colab-coinjoin-api')
 
 class ServerSideServices {
-  async start() {
+  async start () {
     try {
       colabCoinJoinApi.startServer()
-    } catch(err) {
+    } catch (err) {
       console.error('Error starting ServerSideServices: ', err.message)
       throw err
     }

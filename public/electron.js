@@ -29,7 +29,7 @@ app.on('activate', () => {
 })
 
 // Main function that starts the Electron app and background services like IPFS.
-async function run() {
+async function run () {
   try {
     try {
       await app.whenReady()
@@ -42,7 +42,7 @@ async function run() {
 
     const serverSideServices = new ServerSideServices()
     serverSideServices.start()
-  } catch(err) {
+  } catch (err) {
     console.error('Error in run(): ', err)
   }
 }
