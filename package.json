@@ -1,6 +1,6 @@
 {
   "name": "electron-bch-coinjoin-wallet",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "public/electron.js",
   "description": "BCH wallet",
   "author": "Chris Troutner <chris.troutner@gmail.com>",
