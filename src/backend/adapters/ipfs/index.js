@@ -61,7 +61,7 @@ class Ipfs {
     return this.ipfsd
   }
 
-  async initIpfsCoord() {
+  async initIpfsCoord () {
     // JSON-LD and Schema.org schema with info about this app.
     const announceJsonLd = {
       '@context': 'https://schema.org/',
