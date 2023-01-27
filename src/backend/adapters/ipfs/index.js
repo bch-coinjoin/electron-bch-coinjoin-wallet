@@ -6,7 +6,7 @@
 const Ctl = require('ipfsd-ctl')
 const IpfsApi = require('ipfs-http-client')
 const { path } = require('go-ipfs')
-const BCHJS = require('@psf/bch-js')
+// const BCHJS = require('@psf/bch-js')
 // const IpfsCoord = require('ipfs-coord')
 
 class Ipfs {
@@ -14,7 +14,7 @@ class Ipfs {
     // Encapsulate dependencies
     this.ipfsd = null // placeholder IPFS daemon
     this.ipfs = null // placeholder IPFS API
-    this.bchjs = new BCHJS()
+    // this.bchjs = new BCHJS()
     // this.IpfsCoord = IpfsCoord
 
     // Properties of this class instance.
