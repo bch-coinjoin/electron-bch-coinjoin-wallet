@@ -33,7 +33,6 @@
     "electron-is-dev": "2.0.0",
     "electron-squirrel-startup": "1.0.0",
     "go-ipfs": "0.17.0",
-    "ipfs-coord": "8.0.5",
     "ipfs-http-client": "55.0.0",
     "ipfsd-ctl": "10.0.6",
     "koa": "2.14.1",
