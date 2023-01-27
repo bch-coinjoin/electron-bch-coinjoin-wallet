@@ -7,7 +7,7 @@ const Ctl = require('ipfsd-ctl')
 const IpfsApi = require('ipfs-http-client')
 const { path } = require('go-ipfs')
 const BCHJS = require('@psf/bch-js')
-const IpfsCoord = require('ipfs-coord')
+// const IpfsCoord = require('ipfs-coord')
 
 class Ipfs {
   constructor (localConfig = {}) {
@@ -15,7 +15,7 @@ class Ipfs {
     this.ipfsd = null // placeholder IPFS daemon
     this.ipfs = null // placeholder IPFS API
     this.bchjs = new BCHJS()
-    this.IpfsCoord = IpfsCoord
+    // this.IpfsCoord = IpfsCoord
 
     // Properties of this class instance.
     this.ipfsIsReady = false
@@ -35,7 +35,7 @@ class Ipfs {
 
     this.ipfs = this.ipfsd.api
 
-    await this.initIpfsCoord()
+    // await this.initIpfsCoord()
 
     return this.ipfs
   }
@@ -61,7 +61,7 @@ class Ipfs {
     return this.ipfsd
   }
 
-  async initIpfsCoord() {
+  async initIpfsCoord () {
     // JSON-LD and Schema.org schema with info about this app.
     const announceJsonLd = {
       '@context': 'https://schema.org/',
