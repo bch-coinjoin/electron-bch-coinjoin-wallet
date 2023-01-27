@@ -4,7 +4,7 @@ const path = require('path')
 const isDev = require('electron-is-dev')
 
 // Local libraries
-const ServerSideServices = require('../src/services/server-side-services')
+// const ServerSideServices = require('../src/services/server-side-services')
 
 let mainWindow
 
@@ -40,8 +40,8 @@ async function run () {
       app.exit(1)
     }
 
-    const serverSideServices = new ServerSideServices()
-    serverSideServices.start()
+    // const serverSideServices = new ServerSideServices()
+    // serverSideServices.start()
   } catch (err) {
     console.error('Error in run(): ', err)
   }
