@@ -25,7 +25,6 @@
     "@fortawesome/free-regular-svg-icons": "6.1.2",
     "@fortawesome/free-solid-svg-icons": "6.1.2",
     "@fortawesome/react-fontawesome": "0.2.0",
-    "@psf/bch-js": "6.5.7",
     "axios": "0.27.2",
     "bch-message-lib": "2.2.1",
     "bch-token-sweep": "2.2.1",
