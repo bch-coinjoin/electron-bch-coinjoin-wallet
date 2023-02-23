@@ -19,6 +19,8 @@ function BchWallet (props) {
   // Dependency injection through props
   const appData = props.appData
 
+  console.log(`BchWallet appData.bchWalletState.mnemonic: ${appData.bchWalletState.mnemonic}`)
+
   return (
     <>
       <Container>

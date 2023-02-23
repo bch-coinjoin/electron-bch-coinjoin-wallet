@@ -174,6 +174,16 @@ class AsyncLoad {
       return defaultOptions
     }
   }
+
+  async getMnemonicFromServer() {
+    try {
+      const result = await axios.get('http://localhost:5540/wallet')
+      return result.data.mnemonic
+    } catch(err) {
+      console.error('Error in async-load.js/getMnemonicFromServer()')
+      throw err
+    }
+  }
 }
 
 function sleep (ms) {

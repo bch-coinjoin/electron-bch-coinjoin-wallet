@@ -143,10 +143,13 @@ function App (props) {
           setServers(gistServers)
           // console.log('servers: ', servers)
 
+          const newMnemonic = await asyncLoad.getMnemonicFromServer()
+          console.log('Mnemonic fetch from server: ', newMnemonic)
+
           addToModal('Initializing wallet', appData)
           console.log(`Initializing wallet with back end server ${serverUrl}`)
 
-          const walletTemp = await asyncLoad.initWallet(serverUrl, mnemonic, appData)
+          const walletTemp = await asyncLoad.initWallet(serverUrl, newMnemonic, appData)
           setWallet(walletTemp)
 
           // Get the BCH balance of the wallet.
